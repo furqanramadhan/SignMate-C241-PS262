@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#F5F7FA"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".OpeningActivity">
+    tools:context=".LoginActivity">
 
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="left"
+        android:layout_margin="30dp"
+        android:backgroundTint="@color/yellow"
+        android:contentDescription="Back"
+        app:icon="@drawable/backarrow"
+        app:iconGravity="textStart"
+        app:iconPadding="1dp"
+        app:iconSize="13dp"
+        app:iconTint="@color/black"
+        tools:ignore="RtlHardcoded" />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="-55dp"
         android:src="@drawable/logo"/>
 
     <!-- Title -->
@@ -22,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="-40dp"
-        android:text="SIGNMATE"
+        android:text="Explore the app"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/blue" />
@@ -31,10 +45,11 @@
         android:id="@+id/t_open"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Join me in discovering the beauty of sign language. Together!"
+        android:text="You can choose with account, or guest"
         android:textSize="16sp"
         android:textColor="@color/blue"
         android:gravity="center" />
+
 
     <LinearLayout
         android:id="@+id/bg_next"
@@ -43,18 +58,41 @@
         android:scaleType="centerCrop"
         android:background="@drawable/backgroundbawah"
         android:layout_marginTop="20dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <Button
-            android:id="@+id/next_button"
+            android:id="@+id/google_button"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:backgroundTint="@color/yellow"
             android:layout_gravity="center_vertical"
             android:layout_marginHorizontal="30dp"
-            android:text="NEXT"
+            android:layout_marginTop="90dp"
+            android:backgroundTint="@color/yellow"
+            android:text="Continue with Google"
+            android:gravity="fill"
             android:textColor="@color/blue"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            app:icon="@drawable/Google"
+            app:iconSize="30dp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/guest_button"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="30dp"
+            android:backgroundTint="@color/yellow"
+            android:text="Guest Account"
+            android:gravity="fill"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:icon="@drawable/Guest"
+            app:iconSize="30dp"
+            app:iconTint="@color/black" />
+
+
     </LinearLayout>
 
 </LinearLayout>
