@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">SignMate-C241-PS262</string>
     <string name="signmate">SignMate\n</string>
+    <string name="time_to_quiz">Time To\nQuiz &amp; Practice!</string>
+    <string name="alphabet">Alphabets</string>
+    <string name="number">Numbers</string>
+    <string name="yes_no">Yes or No</string>
+    <string name="alphabet_desc">This is an multiple\nchoice quiz to define\nan alphabet sign\nanswer</string>
+    <string name="number_desc">This is an multiple\nchoice quiz to define\nan number sign\nanswer</string>
+    <string name="yes_no_desc">This is an True or\nFalse condition, the\nplayer need to\nanswer correctly</string>
+    <string name="play_now">Play Now</string>
 </resources>
