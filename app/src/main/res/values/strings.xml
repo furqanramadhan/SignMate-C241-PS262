@@ -8,5 +8,8 @@
     <string name="alphabet_desc">This is an multiple\nchoice quiz to define\nan alphabet sign\nanswer</string>
     <string name="number_desc">This is an multiple\nchoice quiz to define\nan number sign\nanswer</string>
     <string name="yes_no_desc">This is an True or\nFalse condition, the\nplayer need to\nanswer correctly</string>
+    <string name="quiz_alphabet">What letter does the sign\nlanguage picture refer\nto?</string>
+    <string name="quiz_number">What number does the sign\nlanguage picture refer\nto?</string>
+    <string name="quiz_yes_no">Is this Z?</string>
     <string name="play_now">Play Now</string>
 </resources>

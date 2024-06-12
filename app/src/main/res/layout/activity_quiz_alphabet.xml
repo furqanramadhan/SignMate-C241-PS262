@@ -56,7 +56,7 @@
             android:layout_width="276dp"
             android:layout_height="44dp"
             android:text="@string/play_now"
-            android:background="@drawable/custom_rounded_button"
+            android:background="@drawable/custom_buttom_playnow"
             android:textColor="@color/white"/>
     </LinearLayout>
 

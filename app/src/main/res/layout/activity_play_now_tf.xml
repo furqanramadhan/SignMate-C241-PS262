@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/white_tint"
-    tools:context=".PlayNowAlphabet">
+    tools:context=".PlayNowTF">
 
     <ImageButton
         android:layout_width="66dp"
@@ -32,7 +32,7 @@
             android:id="@+id/tv_quizDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/quiz_alphabet"
+            android:text="@string/quiz_yes_no"
             android:textSize="22sp"
             android:textColor="@color/blue_dark"
             android:fontFamily="@font/font_poppins"
@@ -50,7 +50,7 @@
                 android:id="@+id/btn_choice_a"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:text="C"
+                android:text="yes"
                 android:background="@drawable/custom_button_choice"
                 android:layout_marginRight="100dp"
                 android:textColor="@color/white"/>
@@ -59,7 +59,7 @@
                 android:id="@+id/btn_choice_b"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:text="I"
+                android:text="no"
                 android:background="@drawable/custom_button_choice"
                 android:textColor="@color/white"/>
         </LinearLayout>
