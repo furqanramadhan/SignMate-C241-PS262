@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white_tint"
+    tools:context=".QuizAlphabetActivity">
+
+    <ImageButton
+        android:layout_width="66dp"
+        android:layout_height="70dp"
+        android:src="@drawable/layer_drawable"
+        android:layout_gravity="left"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

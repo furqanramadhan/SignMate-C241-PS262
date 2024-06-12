@@ -9,19 +9,15 @@
     android:gravity="center"
     tools:context=".LoginActivity">
 
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+    <ImageButton
+        android:layout_width="66dp"
+        android:layout_height="70dp"
+        android:src="@drawable/layer_drawable"
         android:layout_gravity="left"
-        android:layout_margin="30dp"
-        android:backgroundTint="@color/yellow"
-        android:contentDescription="Back"
-        app:icon="@drawable/backarrow"
-        app:iconGravity="textStart"
-        app:iconPadding="1dp"
-        app:iconSize="13dp"
-        app:iconTint="@color/black"
-        tools:ignore="RtlHardcoded" />
+        android:background="@android:color/transparent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"/>
+
 
     <ImageView
         android:id="@+id/logo"
