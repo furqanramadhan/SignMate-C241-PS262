@@ -1,12 +1,13 @@
-package com.capstone.signmate_c241_ps262
+package com.capstone.signmate_c241_ps262.ui.play
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.capstone.signmate_c241_ps262.R
 
-class PlayNowNumber : AppCompatActivity() {
+class PlayNowAlphabet : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

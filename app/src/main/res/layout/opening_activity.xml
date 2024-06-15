@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#F5F7FA"
+    android:background="@color/white_page"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".OpeningActivity">
+    tools:context=".ui.opening.OpeningActivity">
 
 
     <ImageView
