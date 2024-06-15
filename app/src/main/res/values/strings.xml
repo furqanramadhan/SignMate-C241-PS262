@@ -35,4 +35,12 @@
     <string name="about_1">Realtime sign recognition</string>
     <string name="about_2">Cross-cultural understanding</string>
     <string name="about_3">Attractive quiz</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">user123@gmail.com</string>
+    <string name="gender">Gender</string>
+    <string name="date">Date</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="birth_hint">Birth Date</string>
+    <string name="phone_number">Phone Number</string>
 </resources>
