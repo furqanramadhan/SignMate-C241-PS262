@@ -43,4 +43,6 @@
     <string name="year">Year</string>
     <string name="birth_hint">Birth Date</string>
     <string name="phone_number">Phone Number</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
 </resources>
