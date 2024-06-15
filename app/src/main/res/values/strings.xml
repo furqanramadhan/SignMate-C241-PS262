@@ -25,4 +25,14 @@
     <string name="dashboard">Dashboard</string>
     <string name="scan">Scan</string>
     <string name="quiz">Quiz</string>
+    <string name="title_activity_navigation_fragment">NavigationFragment</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="copyright">2024 | C241-PS262™. All Rights Reserved</string>
+    <string name="app_title_capitalize">SIGNMNATE</string>
+    <string name="about_desc">We aimed at improving\ncommunication\naccessibility for individuals\nwith hearing impairments.</string>
+    <string name="about_1">Realtime sign recognition</string>
+    <string name="about_2">Cross-cultural understanding</string>
+    <string name="about_3">Attractive quiz</string>
 </resources>
