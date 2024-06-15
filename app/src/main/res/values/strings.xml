@@ -22,4 +22,7 @@
     <string name="menu_2">Hand Recognition</string>
     <string name="menu_3">Quiz Practice</string>
     <string name="our_feature">Our Feature</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="scan">Scan</string>
+    <string name="quiz">Quiz</string>
 </resources>

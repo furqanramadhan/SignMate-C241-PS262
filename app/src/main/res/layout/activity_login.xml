@@ -7,7 +7,7 @@
     android:background="@color/white_page"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".login.LoginActivity">
+    tools:context=".ui.login.LoginActivity">
 
     <ImageButton
         android:layout_width="66dp"

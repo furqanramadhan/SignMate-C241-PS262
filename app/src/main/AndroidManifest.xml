@@ -31,7 +31,7 @@
             android:name=".ui.quiz.QuizAlphabetActivity"
             android:exported="false" />
         <activity
-            android:name=".login.LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".ui.dashboard.DashboardActivity"

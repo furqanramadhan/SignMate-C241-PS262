@@ -1,4 +1,4 @@
-package com.capstone.signmate_c241_ps262.login
+package com.capstone.signmate_c241_ps262.ui.login
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
