@@ -21,7 +21,7 @@
 
 
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/iv_appLogo"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginTop="-55dp"
@@ -29,27 +29,28 @@
 
     <!-- Title -->
     <TextView
-        android:id="@+id/name_Proj"
+        android:id="@+id/tv_exploreapp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/font_poppinssemi"
         android:layout_marginTop="-40dp"
-        android:text="Explore the app"
+        android:text="@string/explore"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/blue" />
 
     <TextView
-        android:id="@+id/t_open"
+        android:id="@+id/tv_userchoice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You can choose with account, or guest"
+        android:fontFamily="@font/font_inter"
+        android:text="@string/userchoice"
         android:textSize="16sp"
         android:textColor="@color/blue"
         android:gravity="center" />
 
 
     <LinearLayout
-        android:id="@+id/bg_next"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
@@ -59,14 +60,15 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/google_button"
+            android:id="@+id/btn_google"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_gravity="center_vertical"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="90dp"
             android:backgroundTint="@color/yellow"
-            android:text="Continue with Google"
+            android:fontFamily="@font/font_inter"
+            android:text="@string/google"
             android:gravity="fill"
             android:textColor="@color/blue"
             android:textSize="16sp"
@@ -75,21 +77,20 @@
             app:iconTint="@color/black" />
 
         <Button
-            android:id="@+id/guest_button"
+            android:id="@+id/btn_guest"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_gravity="center_vertical"
             android:layout_marginHorizontal="30dp"
             android:backgroundTint="@color/yellow"
-            android:text="Guest Account"
+            android:text="@string/guest"
+            android:fontFamily="@font/font_inter"
             android:gravity="fill"
             android:textColor="@color/blue"
             android:textSize="16sp"
             app:icon="@drawable/Guest"
             app:iconSize="30dp"
             app:iconTint="@color/black" />
-
-
     </LinearLayout>
 
 </LinearLayout>

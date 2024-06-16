@@ -47,4 +47,8 @@
     <string name="next">Next</string>
     <string name="dictionary">Dictionary</string>
     <string name="opening_desc">Join me in discovering the beauty of sign\nlanguage. Together!</string>
+    <string name="explore">Explore the app</string>
+    <string name="userchoice">You can choose with account, or guest</string>
+    <string name="google">Continue with Google</string>
+    <string name="guest">Guest Account</string>
 </resources>

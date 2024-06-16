@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="-40dp"
         android:text="SIGNMATE"
+        android:fontFamily="@font/font_righteous"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/blue" />
@@ -32,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/opening_desc"
+        android:fontFamily="@font/font_inter"
         android:textSize="16sp"
         android:textColor="@color/blue"
         android:gravity="center" />
@@ -52,6 +54,7 @@
             android:backgroundTint="@color/yellow"
             android:layout_gravity="center_vertical"
             android:layout_marginHorizontal="30dp"
+            android:fontFamily="@font/font_inter"
             android:text="NEXT"
             android:textColor="@color/blue"
             android:textSize="16sp" />
