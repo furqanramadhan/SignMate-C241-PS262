@@ -10,7 +10,7 @@
 
 
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/iv_appLogo"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginTop="60dp"
@@ -18,7 +18,7 @@
 
     <!-- Title -->
     <TextView
-        android:id="@+id/name_Proj"
+        android:id="@+id/tv_apptitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="-40dp"
@@ -28,10 +28,10 @@
         android:textColor="@color/blue" />
 
     <TextView
-        android:id="@+id/t_open"
+        android:id="@+id/tv_openingdesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Join me in discovering the beauty of sign language. Together!"
+        android:text="@string/opening_desc"
         android:textSize="16sp"
         android:textColor="@color/blue"
         android:gravity="center" />
@@ -46,7 +46,7 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/next_button"
+            android:id="@+id/btn_next"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/yellow"
@@ -56,5 +56,4 @@
             android:textColor="@color/blue"
             android:textSize="16sp" />
     </LinearLayout>
-
 </LinearLayout>
