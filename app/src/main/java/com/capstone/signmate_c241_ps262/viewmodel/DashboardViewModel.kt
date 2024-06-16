@@ -1,4 +1,4 @@
-package com.capstone.signmate_c241_ps262.ui.dashboard
+package com.capstone.signmate_c241_ps262.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
