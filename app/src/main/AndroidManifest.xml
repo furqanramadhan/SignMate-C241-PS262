@@ -17,7 +17,7 @@
             android:name=".ui.dictionary.DictionaryActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name=".ui.dashboard.DashboardActivity"
             android:exported="false" />
         <activity
             android:name=".ui.manageprofile.ManageProfileActivity"
@@ -46,8 +46,10 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:exported="false" />
+        <activity android:name=".ui.opening.OpeningActivity"
+            android:exported="false"/>
         <activity
-            android:name=".ui.dashboard.DashboardActivity"
+            android:name=".ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

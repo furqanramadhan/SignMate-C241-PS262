@@ -18,5 +18,6 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         window.statusBarColor = Color.parseColor("#256656")
         setContentView(binding.root)
+
     }
 }
