@@ -51,4 +51,8 @@
     <string name="userchoice">You can choose with account, or guest</string>
     <string name="google">Continue with Google</string>
     <string name="guest">Guest Account</string>
+    <string name="keep_doing_practice_and_good_luck">Keep doing practice and good luck!</string>
+    <string name="you_have_8_10_correct_answers">You have 8/10 correct answers.</string>
+    <string name="awesome">Awesome!</string>
+    <string name="exit_the_quiz">exit the quiz</string>
 </resources>
