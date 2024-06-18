@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "215899096912",
+    "firebase_url": "https://signmate-7778d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "signmate-7778d",
+    "storage_bucket": "signmate-7778d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215899096912:android:d160524b7f5ec70ccf8e55",
+        "android_client_info": {
+          "package_name": "com.capstone.signmate_c241_ps262"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215899096912-ljlutkrnqocdubt8oudrdd3c81rjc6bb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-zQ9OuCBkr68SIBy_s6kPQQpyMFUnSbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215899096912-dlnkai4kvdtjk0fu8fkm51a6ip3ln676.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215899096912:android:268ae96cf836e625cf8e55",
+        "android_client_info": {
+          "package_name": "com.dicoding.asclepius"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215899096912-ljlutkrnqocdubt8oudrdd3c81rjc6bb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-zQ9OuCBkr68SIBy_s6kPQQpyMFUnSbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215899096912-dlnkai4kvdtjk0fu8fkm51a6ip3ln676.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215899096912:android:90b5993e87163ec9cf8e55",
+        "android_client_info": {
+          "package_name": "com.signmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215899096912-jhi44bj32emssos17d86oq766bvfjb83.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.signmate",
+            "certificate_hash": "aa3df844d639564f41b56df60bc775eae632125d"
+          }
+        },
+        {
+          "client_id": "215899096912-ljlutkrnqocdubt8oudrdd3c81rjc6bb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-zQ9OuCBkr68SIBy_s6kPQQpyMFUnSbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215899096912-dlnkai4kvdtjk0fu8fkm51a6ip3ln676.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
