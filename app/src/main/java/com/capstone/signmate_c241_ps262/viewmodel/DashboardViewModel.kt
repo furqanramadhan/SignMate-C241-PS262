@@ -24,7 +24,7 @@ class DashboardViewModel : ViewModel() {
         fetchUserProfile()
     }
 
-    private fun fetchUserProfile(){
+    fun fetchUserProfile(){
         val currentUser = auth.currentUser
         currentUser?.email?.let { email ->
             usersCollection.whereEqualTo("email", email)

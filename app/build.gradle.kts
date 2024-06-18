@@ -74,5 +74,6 @@ dependencies {
     // https://firebase.google.com/docs/android/setup#available-libraries
 
     implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation ("com.squareup.picasso:picasso:2.8")
 
 }
