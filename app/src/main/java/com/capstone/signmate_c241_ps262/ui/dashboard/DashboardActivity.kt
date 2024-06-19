@@ -12,7 +12,9 @@ import com.capstone.signmate_c241_ps262.R
 import com.capstone.signmate_c241_ps262.databinding.ActivityDashboardBinding
 import com.capstone.signmate_c241_ps262.response.Profile
 import com.capstone.signmate_c241_ps262.ui.about.AboutActivity
+import com.capstone.signmate_c241_ps262.ui.dictionary.DictionaryActivity
 import com.capstone.signmate_c241_ps262.ui.manageprofile.ManageProfileActivity
+import com.capstone.signmate_c241_ps262.ui.quiz.QuizAlphabetActivity
 import com.capstone.signmate_c241_ps262.viewmodel.DashboardViewModel
 import com.squareup.picasso.Picasso
 
@@ -54,6 +56,14 @@ class DashboardActivity : AppCompatActivity() {
 
         binding.btnMenu3.setOnClickListener {
             navigateToFeedback()
+        }
+
+        binding.btnFeature1.setOnClickListener{
+            navigateToDictionary()
+        }
+
+        binding.btnFeature3.setOnClickListener{
+            navigatetoQuiz()
         }
     }
 
@@ -104,6 +114,15 @@ class DashboardActivity : AppCompatActivity() {
 
     private fun navigateToAbout() {
         val intent = Intent(this, AboutActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToDictionary(){
+        val intent = Intent(this, DictionaryActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navigatetoQuiz(){
+        val intent = Intent(this, QuizAlphabetActivity::class.java)
         startActivity(intent)
     }
 
