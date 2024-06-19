@@ -127,7 +127,7 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun navigateToFeedback() {
-        val feedbackUrl = "https://example.com/feedback" // Replace with your feedback URL
+        val feedbackUrl = "https://bit.ly/3xdHNJ9"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(feedbackUrl))
         startActivity(intent)
     }
