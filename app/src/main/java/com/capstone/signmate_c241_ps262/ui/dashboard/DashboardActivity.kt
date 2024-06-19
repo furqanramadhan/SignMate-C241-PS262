@@ -16,9 +16,11 @@ import com.capstone.signmate_c241_ps262.ui.manageprofile.ManageProfileActivity
 import com.capstone.signmate_c241_ps262.viewmodel.DashboardViewModel
 import com.squareup.picasso.Picasso
 
+@Suppress("DEPRECATION")
 class DashboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var viewModel: DashboardViewModel
+    private lateinit var guestProfile: Profile
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,11 +31,16 @@ class DashboardActivity : AppCompatActivity() {
         // Initialize ViewModel
         viewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
 
+        // Retrieve guest profile from intent extras
+        guestProfile = intent.getParcelableExtra("profile") ?: Profile()
+
         // Set up click listeners
         setupMenuButtonListeners()
 
         // Observe ViewModel LiveData
         observeViewModel()
+
+        updateUI(guestProfile)
     }
 
     private fun setupMenuButtonListeners() {
@@ -65,13 +72,25 @@ class DashboardActivity : AppCompatActivity() {
 
     @SuppressLint("StringFormatInvalid")
     private fun updateUI(profile: Profile) {
-        // Update profile image (assuming `photo` field in Profile is a URL)
-        profile.photo?.let {
-            Picasso.get().load(it).placeholder(R.drawable.ic_profile).into(binding.ivProfile)
-        }
+        // Check if user is guest
+        if (profile.id == "Guest") {
+            // If user is guest, set default profile image
+            Picasso.get().load(R.drawable.ic_profile).into(binding.ivProfile)
 
-        // Set welcome text
-        binding.tvWelcome.text = getString(R.string.welcome, profile.name)
+            // Set welcome text for guest
+            binding.tvWelcome.text = getString(R.string.welcome_guest)
+        } else {
+            // If user is not guest, check if photo URL is not empty before loading it
+            if (!profile.photo.isNullOrEmpty()) {
+                Picasso.get().load(profile.photo).placeholder(R.drawable.ic_profile).into(binding.ivProfile)
+            } else {
+                // Set default profile image if photo URL is empty
+                Picasso.get().load(R.drawable.ic_profile).into(binding.ivProfile)
+            }
+
+            // Set welcome text for logged-in user
+            binding.tvWelcome.text = getString(R.string.welcome, profile.name)
+        }
     }
 
     private fun showToast(message: String) {

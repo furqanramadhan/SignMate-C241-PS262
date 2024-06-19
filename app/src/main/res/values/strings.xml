@@ -13,6 +13,7 @@
     <string name="quiz_yes_no">Is this Z?</string>
     <string name="play_now">Play Now</string>
     <string name="welcome">Hi %1$s!</string>
+    <string name="welcome_guest">Hi Guest!</string>
     <string name="manage_profile">Manage Profile</string>
     <string name="about">About</string>
     <string name="feedback">Feedback</string>

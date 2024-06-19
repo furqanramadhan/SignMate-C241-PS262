@@ -28,38 +28,24 @@ class LoginViewModel : ViewModel() {
     val toastMessage: MutableLiveData<String?>
         get() = _toastMessage
 
-//    private fun signInWithGoogle(idToken: String) {
-//        val credential = GoogleAuthProvider.getCredential(idToken, null)
-//        auth.signInWithCredential(credential)
-//            .addOnCompleteListener { task ->
-//                if (task.isSuccessful) {
-//                    // Sign in success, update UI with the signed-in user's information
-//                    val user = auth.currentUser
-//                    user?.email?.let { fetchUserProfile(it) }
-//                } else {
-//                    // If sign in fails, display a message to the user.
-//                    val errorMessage = "Authentication failed: ${task.exception?.message}"
-//                    _toastMessage.value = errorMessage
-//                    _loginResult.value = false
-//                }
-//            }
-//    }
-    private fun fetchUserProfile(email: String) {
-        usersCollection.whereEqualTo("email", email)
-            .get()
-            .addOnSuccessListener { documents ->
-                for (document in documents) {
-                    val profile = document.toObject(Profile::class.java)
-                    _userProfile.value = profile
-                    break
+    private fun fetchUserProfile(email: String? = auth.currentUser?.email) {
+        email?.let {
+            usersCollection.whereEqualTo("email", it)
+                .get()
+                .addOnSuccessListener { documents ->
+                    for (document in documents) {
+                        val profile = document.toObject(Profile::class.java)
+                        _userProfile.value = profile
+                        break
+                    }
+                    _loginResult.value = true
                 }
-                _loginResult.value = true
-            }
-            .addOnFailureListener { exception ->
-                val errorMessage = "Error getting user profile: ${exception.message}"
-                _toastMessage.value = errorMessage
-                _loginResult.value = false
-            }
+                .addOnFailureListener { exception ->
+                    val errorMessage = "Error getting user profile: ${exception.message}"
+                    _toastMessage.value = errorMessage
+                    _loginResult.value = false
+                }
+        }
     }
 
     fun handleSignInResult(task: Task<GoogleSignInAccount>) {
@@ -71,7 +57,6 @@ class LoginViewModel : ViewModel() {
             _loginResult.value = false
         }
     }
-
     private fun signInWithGoogle(idToken: String) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
@@ -89,7 +74,11 @@ class LoginViewModel : ViewModel() {
                             name = it.displayName ?: ""
                         )
                         saveUserProfile(profile)
-                        fetchUserProfile(it.email!!)
+                        if (profile.id != "Guest") {
+                            fetchUserProfile() // Fetch profile only if user is not a guest
+                        } else {
+                            _loginResult.value = true // If guest, login is successful
+                        }
                     }
                 } else {
                     val errorMessage = "Authentication failed: ${task.exception?.message}"

@@ -24,23 +24,28 @@ class DashboardViewModel : ViewModel() {
         fetchUserProfile()
     }
 
-    fun fetchUserProfile(){
+    fun fetchUserProfile() {
         val currentUser = auth.currentUser
         currentUser?.email?.let { email ->
-            usersCollection.whereEqualTo("email", email)
-                .get()
-                .addOnSuccessListener { documents ->
-                    for(document in documents){
-                        val profile = document.toObject(Profile::class.java)
-                        _userProfile.value = profile
-                        break
+            // Check if the current user is not a guest
+            if (!isGuestUser(currentUser.uid)) {
+                usersCollection.whereEqualTo("email", email)
+                    .get()
+                    .addOnSuccessListener { documents ->
+                        for (document in documents) {
+                            val profile = document.toObject(Profile::class.java)
+                            _userProfile.value = profile
+                            break
+                        }
                     }
-                }
-                .addOnFailureListener { exception ->
-                    val errorMessage = "Error getting user profile: ${exception.message}"
-                    _toastMessage.value = errorMessage
-                }
+                    .addOnFailureListener { exception ->
+                        val errorMessage = "Error getting user profile: ${exception.message}"
+                        _toastMessage.value = errorMessage
+                    }
+            }
         }
     }
-
+    private fun isGuestUser(userId: String): Boolean {
+        return userId == "Guest"
+    }
 }
