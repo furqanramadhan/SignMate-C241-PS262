@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.capstone.signmate_c241_ps262"
-        minSdk = 28
+        minSdk = 27
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -38,6 +38,7 @@ android {
     buildFeatures{
         viewBinding = true
         dataBinding = true
+        mlModelBinding = true
     }
 }
 
@@ -52,6 +53,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.firebase.auth)
     implementation(libs.androidx.databinding.runtime)
+    implementation(libs.tensorflow.lite.support)
+    implementation(libs.tensorflow.lite.metadata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -60,11 +63,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.2")
     implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
-
-    // TensorFlow Lite for Machine Learning
-    implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4")
-    implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.4")
-
 
     // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
@@ -77,5 +75,10 @@ dependencies {
 
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation ("com.squareup.picasso:picasso:2.8")
+
+    implementation("androidx.camera:camera-core:1.3.4")
+    implementation("androidx.camera:camera-camera2:1.3.4")
+    implementation("androidx.camera:camera-lifecycle:1.3.4")
+    implementation("androidx.camera:camera-view:1.0.0-alpha28")
 
 }

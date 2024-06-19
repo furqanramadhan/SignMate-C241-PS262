@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.signmate_c241_ps262.R
+import com.capstone.signmate_c241_ps262.camera.CameraHandRecognition
 import com.capstone.signmate_c241_ps262.databinding.ActivityDashboardBinding
 import com.capstone.signmate_c241_ps262.response.Profile
 import com.capstone.signmate_c241_ps262.ui.about.AboutActivity
@@ -31,7 +32,7 @@ class DashboardActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Initialize ViewModel
-        viewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
+        viewModel = ViewModelProvider(this)[DashboardViewModel::class.java]
 
         // Retrieve guest profile from intent extras
         guestProfile = intent.getParcelableExtra("profile") ?: Profile()
@@ -60,6 +61,10 @@ class DashboardActivity : AppCompatActivity() {
 
         binding.btnFeature1.setOnClickListener{
             navigateToDictionary()
+        }
+
+        binding.btnFeature2.setOnClickListener {
+            navigateToCameraHandRecognition()
         }
 
         binding.btnFeature3.setOnClickListener{
@@ -91,7 +96,7 @@ class DashboardActivity : AppCompatActivity() {
             binding.tvWelcome.text = getString(R.string.welcome_guest)
         } else {
             // If user is not guest, check if photo URL is not empty before loading it
-            if (!profile.photo.isNullOrEmpty()) {
+            if (profile.photo.isNotEmpty()) {
                 Picasso.get().load(profile.photo).placeholder(R.drawable.ic_profile).into(binding.ivProfile)
             } else {
                 // Set default profile image if photo URL is empty
@@ -121,6 +126,12 @@ class DashboardActivity : AppCompatActivity() {
         val intent = Intent(this, DictionaryActivity::class.java)
         startActivity(intent)
     }
+
+    private fun navigateToCameraHandRecognition(){
+        val intent=Intent(this, CameraHandRecognition::class.java)
+        startActivity(intent)
+    }
+
     private fun navigatetoQuiz(){
         val intent = Intent(this, QuizAlphabetActivity::class.java)
         startActivity(intent)

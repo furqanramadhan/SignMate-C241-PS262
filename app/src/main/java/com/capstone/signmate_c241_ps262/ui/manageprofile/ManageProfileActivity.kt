@@ -89,7 +89,6 @@ class ManageProfileActivity : AppCompatActivity() {
                     binding.spinnerGender.setSelection(genderIndex)
                 }
             }
-
             // Load profile picture using Picasso
             if (it.photo.isNotEmpty()) {
                 Picasso.get()
