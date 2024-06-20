@@ -31,7 +31,7 @@ interface ApiService {
     // Endpoint Number Quiz - Post
     @POST("/number-quiz/submit")
     fun submitNumberQuizAnswers(
-        @Body answers: ListQuizAnswer
+        @Body answers: QuizAnswer
     ): Call<QuizResponse>
 
     // Endpoint Yes or No Quiz - Get
@@ -41,7 +41,7 @@ interface ApiService {
     // Endpoint Yes or No Quiz - Post
     @POST("/yes-or-no-quiz/submit")
     fun submitYesOrNoQuizAnswers(
-        @Body answers: ListQuizAnswer
+        @Body answers: QuizAnswer
     ): Call<QuizResponse>
 
     // Endpoint Edit Profile - Get
