@@ -45,7 +45,7 @@ class DashboardViewModel : ViewModel() {
             }
         }
     }
-    private fun isGuestUser(userId: String): Boolean {
-        return userId == "Guest"
+    private fun isGuestUser(userName: String): Boolean {
+        return userName == "Guest User"
     }
 }

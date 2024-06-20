@@ -96,5 +96,4 @@ class LoginActivity : AppCompatActivity() {
         val guestProfile = viewModel.createGuestProfile()
         moveToDashboard(guestProfile)
     }
-
 }

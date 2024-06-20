@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="150dp"
-                app:cardBackgroundColor="@color/gray">
+                app:cardBackgroundColor="@android:color/transparent">
                 <ImageView
                     android:id="@+id/iv_profile"
                     android:layout_width="50dp"
@@ -69,6 +69,7 @@
                     android:layout_margin="10dp"
                     android:paddingBottom="10dp" />
             </androidx.cardview.widget.CardView>
+
 
             <TextView
                 android:id="@+id/tv_welcome"

@@ -19,7 +19,6 @@ import com.capstone.signmate_c241_ps262.ui.quiz.QuizTFActivity
 import com.capstone.signmate_c241_ps262.viewmodel.DashboardViewModel
 import com.squareup.picasso.Picasso
 
-@Suppress("DEPRECATION")
 class DashboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var viewModel: DashboardViewModel
@@ -88,22 +87,19 @@ class DashboardActivity : AppCompatActivity() {
     @SuppressLint("StringFormatInvalid")
     private fun updateUI(profile: Profile) {
         // Check if user is guest
-        if (profile.id == "Guest") {
+        if (profile.name == "Guest User") {
             // If user is guest, set default profile image
             Picasso.get().load(R.drawable.ic_profile).into(binding.ivProfile)
 
             // Set welcome text for guest
             binding.tvWelcome.text = getString(R.string.welcome_guest)
         } else {
-            // If user is not guest, check if photo URL is not empty before loading it
             if (profile.photo.isNotEmpty()) {
                 Picasso.get().load(profile.photo).placeholder(R.drawable.ic_profile).into(binding.ivProfile)
             } else {
-                // Set default profile image if photo URL is empty
                 Picasso.get().load(R.drawable.ic_profile).into(binding.ivProfile)
             }
 
-            // Set welcome text for logged-in user
             binding.tvWelcome.text = getString(R.string.welcome, profile.name)
         }
     }
