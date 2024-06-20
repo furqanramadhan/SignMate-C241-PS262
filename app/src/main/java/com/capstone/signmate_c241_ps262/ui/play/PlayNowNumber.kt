@@ -2,16 +2,27 @@ package com.capstone.signmate_c241_ps262.ui.play
 
 import android.graphics.Color
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.capstone.signmate_c241_ps262.databinding.ActivityPlayNowNumberBinding
 
-class PlayNowNumber : AppCompatActivity() {
-    private lateinit var binding: ActivityPlayNowNumberBinding
+class PlayNowNumberFragment : Fragment() {
+    private var _binding: ActivityPlayNowNumberBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityPlayNowNumberBinding.inflate(layoutInflater)
-        window.statusBarColor = Color.parseColor("#256656")
-        setContentView(binding.root)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = ActivityPlayNowNumberBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
