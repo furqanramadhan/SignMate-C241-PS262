@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white_page"
     android:padding="20dp"
-    tools:context=".ui.quiz.QuizAlphabetActivity">
+    tools:context=".ui.play.PlayNowAlphabet">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -58,18 +58,17 @@
             android:gravity="center_horizontal">
 
             <ImageView
-                android:id="@+id/iv_quizAlphabet"
+                android:id="@+id/iv_placeholderquiz"
                 android:layout_width="289dp"
                 android:layout_height="206dp"
-                android:layout_marginTop="180dp"
-                android:src="@drawable/ic_hand"/>
+                android:layout_marginTop="80dp"/>
 
             <TextView
-                android:id="@+id/tv_quizDesc"
+                android:id="@+id/tv_wait"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/quiz_alphabet"
                 android:textSize="22sp"
+                android:text="@string/please_wait"
                 android:textColor="@color/blue_dark"
                 android:fontFamily="@font/font_poppins"
                 android:gravity="center"
@@ -86,7 +85,6 @@
                     android:id="@+id/btn_choice_a"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:text="C"
                     android:background="@drawable/custom_button_choice"
                     android:layout_marginEnd="100dp"
                     android:textColor="@color/white"/>
@@ -95,10 +93,9 @@
                     android:id="@+id/btn_choice_b"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:text="I"
                     android:background="@drawable/custom_button_choice"
                     android:textColor="@color/white"/>
             </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 </LinearLayout>

@@ -2,31 +2,82 @@ package com.capstone.signmate_c241_ps262.ui.play
 
 import android.graphics.Color
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.capstone.signmate_c241_ps262.R
 import com.capstone.signmate_c241_ps262.databinding.ActivityPlayNowAlphabetBinding
+import com.capstone.signmate_c241_ps262.response.QuizQuestion
+import com.capstone.signmate_c241_ps262.viewmodel.QuizAlphabetViewModel
 
-class PlayNowAlphabetFragment : Fragment() {
-    private var _binding: ActivityPlayNowAlphabetBinding? = null
-    private val binding get() = _binding!!
+class PlayNowAlphabet : AppCompatActivity() {
+    private lateinit var binding: ActivityPlayNowAlphabetBinding
+    private lateinit var viewModel: QuizAlphabetViewModel
+    private lateinit var currentQuestion: QuizQuestion
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = ActivityPlayNowAlphabetBinding.inflate(inflater, container, false)
-        return binding.root
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityPlayNowAlphabetBinding.inflate(layoutInflater)
+        window.statusBarColor = Color.parseColor("#256656")
+        setContentView(binding.root)
+        viewModel = ViewModelProvider(this)[QuizAlphabetViewModel::class.java]
+
+        viewModel.quizQuestions.observe(this) { quizQuestions ->
+            if (quizQuestions.isNotEmpty()) {
+                currentQuestion = quizQuestions[0]
+                loadQuestion(currentQuestion)
+            }
+        }
+
+        viewModel.submitQuizStatus.observe(this) { submitted ->
+            if (submitted) {
+                viewModel.errorMessage.value?.let { errorMessage ->
+                    Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show()
+                }
+                viewModel.score.value?.let { score ->
+                    Toast.makeText(this, "Your score is: $score", Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+
+        viewModel.errorMessage.observe(this) { errorMessage ->
+            if (errorMessage.isNotEmpty()) {
+                Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        binding.btnChoiceA.setOnClickListener {
+            onAnswerSelected(binding.btnChoiceA.text.toString())
+        }
+
+        binding.btnChoiceB.setOnClickListener {
+            onAnswerSelected(binding.btnChoiceB.text.toString())
+        }
+
+        viewModel.loadQuizQuestions()
     }
+    private fun loadQuestion(question: QuizQuestion) {
+        Glide.with(this)
+            .load(question.image)
+            .placeholder(R.drawable.ic_placeholder)
+            .error(R.drawable.ic_brokenimg)
+            .into(binding.ivPlaceholderquiz)
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        binding.tvWait.text = question.question
+        if (question.choices.size >= 2) {
+            binding.btnChoiceA.text = question.choices[0]
+            binding.btnChoiceB.text = question.choices[1]
+        }
+    }
+    private fun onAnswerSelected(selectedAnswer: String) {
+        viewModel.onAnswerSelected(selectedAnswer)
+
+        if ((viewModel.quizQuestions.value?.size ?: 0) > viewModel.currentQuestionIndex) {
+            val nextQuestion = viewModel.quizQuestions.value?.get(viewModel.currentQuestionIndex)
+            if (nextQuestion != null) {
+                loadQuestion(nextQuestion)
+            }
+        }
     }
 }

@@ -68,7 +68,7 @@ class DashboardActivity : AppCompatActivity() {
         }
 
         binding.btnFeature3.setOnClickListener{
-            navigatetoQuiz()
+            navigateToQuiz()
         }
     }
 
@@ -132,7 +132,7 @@ class DashboardActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun navigatetoQuiz(){
+    private fun navigateToQuiz(){
         val intent = Intent(this, QuizAlphabetActivity::class.java)
         startActivity(intent)
     }

@@ -58,7 +58,6 @@
             android:layout_height="wrap_content"
             android:text="@string/time_to_quiz"
             android:fontFamily="@font/font_inter"
-            android:layout_marginTop="50dp"
             android:layout_marginStart="24dp"
             android:textSize="35sp"/>
 
@@ -85,7 +84,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/blue_dark"
                 android:fontFamily="@font/font_poppinsbold"
-                android:layout_marginTop="25dp"/>
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:id="@+id/tv_quizDesc"

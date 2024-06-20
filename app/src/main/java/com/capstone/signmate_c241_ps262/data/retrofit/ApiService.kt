@@ -3,6 +3,7 @@ package com.capstone.signmate_c241_ps262.data.retrofit
 import com.capstone.signmate_c241_ps262.response.ListQuizAnswer
 import com.capstone.signmate_c241_ps262.response.Profile
 import com.capstone.signmate_c241_ps262.response.ProfileEditResponse
+import com.capstone.signmate_c241_ps262.response.QuizAnswer
 import com.capstone.signmate_c241_ps262.response.QuizQuestion
 import com.capstone.signmate_c241_ps262.response.QuizResponse
 import retrofit2.Call
@@ -12,14 +13,15 @@ import retrofit2.http.POST
 import retrofit2.http.Query
 
 interface ApiService {
-    // Endpoint Alphabet Quiz - Get
     @GET("/alphabet-quiz/questions")
-    fun getAlphabetQuizQuestions(): Call<List<QuizQuestion>>
+    fun getAlphabetQuizQuestions(
+        @Query("limit") limit: Int = 10
+    ): Call<List<QuizQuestion>>
 
     // Endpoint Alphabet Quiz - Post
     @POST("/alphabet-quiz/submit")
     fun submitAlphabetQuizAnswers(
-        @Body answers: ListQuizAnswer
+        @Body answers: QuizAnswer
     ): Call<QuizResponse>
 
     // Endpoint Number Quiz - Get
