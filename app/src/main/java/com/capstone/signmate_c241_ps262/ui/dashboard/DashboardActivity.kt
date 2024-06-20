@@ -1,11 +1,13 @@
 package com.capstone.signmate_c241_ps262.ui.dashboard
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.signmate_c241_ps262.R
@@ -15,10 +17,13 @@ import com.capstone.signmate_c241_ps262.ui.about.AboutActivity
 import com.capstone.signmate_c241_ps262.ui.camera.CameraHandRecognition
 import com.capstone.signmate_c241_ps262.ui.dictionary.DictionaryActivity
 import com.capstone.signmate_c241_ps262.ui.manageprofile.ManageProfileActivity
+import com.capstone.signmate_c241_ps262.ui.quiz.QuizAlphabetActivity
+import com.capstone.signmate_c241_ps262.ui.quiz.QuizNumberActivity
 import com.capstone.signmate_c241_ps262.ui.quiz.QuizTFActivity
 import com.capstone.signmate_c241_ps262.viewmodel.DashboardViewModel
 import com.squareup.picasso.Picasso
 
+@Suppress("DEPRECATION")
 class DashboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var viewModel: DashboardViewModel
@@ -67,7 +72,7 @@ class DashboardActivity : AppCompatActivity() {
         }
 
         binding.btnFeature3.setOnClickListener{
-            navigateToQuiz()
+            showQuizSelectionDialog()
         }
     }
 
@@ -128,8 +133,13 @@ class DashboardActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun navigateToQuiz(){
-        val intent = Intent(this, QuizTFActivity::class.java)
+    private fun navigateToQuiz(selectedQuiz: Int) {
+        val intent: Intent = when (selectedQuiz) {
+            1 -> Intent(this, QuizAlphabetActivity::class.java)
+            2 -> Intent(this, QuizNumberActivity::class.java)
+            3 -> Intent(this, QuizTFActivity::class.java)
+            else -> throw IllegalArgumentException("Invalid Quiz Selection")
+        }
         startActivity(intent)
     }
 
@@ -137,5 +147,17 @@ class DashboardActivity : AppCompatActivity() {
         val feedbackUrl = "https://bit.ly/3xdHNJ9"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(feedbackUrl))
         startActivity(intent)
+    }
+
+    private fun showQuizSelectionDialog() {
+        val quizOptions = arrayOf("Quiz Alphabet", "Quiz Number", "Quiz Yes or No")
+
+        AlertDialog.Builder(this)
+            .setTitle("Choose a Quiz")
+            .setItems(quizOptions) { dialog: DialogInterface, which: Int ->
+                navigateToQuiz(which + 1)
+                dialog.dismiss()
+            }
+            .show()
     }
 }
