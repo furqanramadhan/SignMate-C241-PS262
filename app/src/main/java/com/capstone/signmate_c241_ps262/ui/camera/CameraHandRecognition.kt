@@ -85,7 +85,7 @@ class CameraHandRecognition : AppCompatActivity() {
     }
 
     private fun takePhoto() {
-        val imageCapture = imageCapture
+        val imageCapture = imageCapture ?: return
 
         val outputOptions = ImageCapture.OutputFileOptions.Builder(createTempFile("temp", ".jpg")).build()
 
