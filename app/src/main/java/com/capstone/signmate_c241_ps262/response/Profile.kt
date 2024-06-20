@@ -5,13 +5,13 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Profile(
-    val id: String = "",
-    val email: String = "",
-    val gender: String = "",
-    val photo: String = "",
-    val phoneNumber: String = "",
-    val birthDate: String = "",
-    val name: String = ""
+    var id: String = "",
+    var name: String = "",
+    var email: String = "",
+    var gender: String = "",
+    var phoneNumber: String = "",
+    var birthDate: String = "",
+    var photo: String = ""
 ) : Parcelable {
     constructor() : this("", "", "", "", "", "", "")
 }

@@ -9,13 +9,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.signmate_c241_ps262.R
-import com.capstone.signmate_c241_ps262.camera.CameraHandRecognition
 import com.capstone.signmate_c241_ps262.databinding.ActivityDashboardBinding
 import com.capstone.signmate_c241_ps262.response.Profile
 import com.capstone.signmate_c241_ps262.ui.about.AboutActivity
+import com.capstone.signmate_c241_ps262.ui.camera.CameraHandRecognition
 import com.capstone.signmate_c241_ps262.ui.dictionary.DictionaryActivity
 import com.capstone.signmate_c241_ps262.ui.manageprofile.ManageProfileActivity
-import com.capstone.signmate_c241_ps262.ui.quiz.QuizNumberActivity
 import com.capstone.signmate_c241_ps262.ui.quiz.QuizTFActivity
 import com.capstone.signmate_c241_ps262.viewmodel.DashboardViewModel
 import com.squareup.picasso.Picasso
