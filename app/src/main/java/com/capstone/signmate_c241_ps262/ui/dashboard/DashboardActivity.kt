@@ -15,7 +15,7 @@ import com.capstone.signmate_c241_ps262.response.Profile
 import com.capstone.signmate_c241_ps262.ui.about.AboutActivity
 import com.capstone.signmate_c241_ps262.ui.dictionary.DictionaryActivity
 import com.capstone.signmate_c241_ps262.ui.manageprofile.ManageProfileActivity
-import com.capstone.signmate_c241_ps262.ui.quiz.QuizAlphabetActivity
+import com.capstone.signmate_c241_ps262.ui.quiz.QuizNumberActivity
 import com.capstone.signmate_c241_ps262.viewmodel.DashboardViewModel
 import com.squareup.picasso.Picasso
 
@@ -133,7 +133,7 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun navigateToQuiz(){
-        val intent = Intent(this, QuizAlphabetActivity::class.java)
+        val intent = Intent(this, QuizNumberActivity::class.java)
         startActivity(intent)
     }
 
