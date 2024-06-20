@@ -18,11 +18,11 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.capstone.signmate_c241_ps262.R
-import com.capstone.signmate_c241_ps262.camera.ImageClassifierHelper
 import com.capstone.signmate_c241_ps262.databinding.ActivityCameraHandRecognitionBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+@Suppress("DEPRECATION")
 class CameraHandRecognition : AppCompatActivity() {
     private lateinit var imageClassifierHelper: ImageClassifierHelper
     private lateinit var binding: ActivityCameraHandRecognitionBinding
@@ -85,7 +85,7 @@ class CameraHandRecognition : AppCompatActivity() {
     }
 
     private fun takePhoto() {
-        val imageCapture = imageCapture ?: return
+        val imageCapture = imageCapture
 
         val outputOptions = ImageCapture.OutputFileOptions.Builder(createTempFile("temp", ".jpg")).build()
 

@@ -6,6 +6,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.capstone.signmate_c241_ps262.R
 import com.capstone.signmate_c241_ps262.databinding.ActivityDictionaryBinding
 import com.capstone.signmate_c241_ps262.viewmodel.ImageViewModel
@@ -13,18 +15,13 @@ import com.capstone.signmate_c241_ps262.viewmodel.ImageViewModel
 class DictionaryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDictionaryBinding
     private lateinit var viewModel: ImageViewModel
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.statusBarColor = Color.parseColor("#256656")
 
-
-
         // Inisialisasi binding
         binding = DataBindingUtil.setContentView(this, R.layout.activity_dictionary)
         binding.lifecycleOwner = this  // untuk LiveData
-
-        window.statusBarColor
 
         // Inisialisasi ViewModel
         viewModel = ViewModelProvider(this)[ImageViewModel::class.java]
@@ -32,7 +29,7 @@ class DictionaryActivity : AppCompatActivity() {
 
         // Observing the currentIndex to update the ImageView
         viewModel.currentIndex.observe(this) {
-            binding.ivDictionary.setImageResource(viewModel.getCurrentImageResource())
+            loadCurrentImage()
         }
 
         // Observe the toastMessage to show a Toast
@@ -50,5 +47,11 @@ class DictionaryActivity : AppCompatActivity() {
         binding.btnNext.setOnClickListener {
             viewModel.moveToNextImage()
         }
+    }
+    private fun loadCurrentImage() {
+        Glide.with(this)
+            .load(viewModel.getCurrentImageResource())
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .into(binding.ivDictionary)
     }
 }

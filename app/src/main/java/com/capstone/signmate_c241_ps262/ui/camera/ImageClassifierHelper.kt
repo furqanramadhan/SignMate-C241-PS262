@@ -1,4 +1,4 @@
-package com.capstone.signmate_c241_ps262.camera
+package com.capstone.signmate_c241_ps262.ui.camera
 
 import android.content.Context
 import android.graphics.Bitmap
