@@ -1,17 +1,22 @@
-package com.capstone.signmate_c241_ps262.ui.camera
+package com.capstone.signmate_c241_ps262.camera
 
 import android.Manifest
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.ImageFormat
+import android.graphics.Rect
+import android.graphics.YuvImage
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
+import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageCaptureException
+import androidx.camera.core.ImageProxy
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
@@ -21,8 +26,10 @@ import com.capstone.signmate_c241_ps262.R
 import com.capstone.signmate_c241_ps262.databinding.ActivityCameraHandRecognitionBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.io.ByteArrayOutputStream
+import java.nio.ByteBuffer
+import java.nio.ByteOrder
 
-@Suppress("DEPRECATION")
 class CameraHandRecognition : AppCompatActivity() {
     private lateinit var imageClassifierHelper: ImageClassifierHelper
     private lateinit var binding: ActivityCameraHandRecognitionBinding
@@ -129,3 +136,4 @@ class CameraHandRecognition : AppCompatActivity() {
         ContextCompat.checkSelfPermission(baseContext, it) == PackageManager.PERMISSION_GRANTED
     }
 }
+
