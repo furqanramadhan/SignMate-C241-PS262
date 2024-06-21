@@ -22,12 +22,12 @@ SignMate leverages technology to offer interactive sign language courses, commun
 
 This app is built with:
 
-* [![Android][Android.Studio]][Android-url] : Koala | 2024.1.1 3,2-8,5
+* [![Android][Android.Studio]][Android-url] : v2024.1.1
 * [![Gradle][Gradle]][Gradle-url] : v8.8
 * SDK version: [35.0.1][sdk-url]
 
-[Android.Studio]: https://img.shields.io/badge/Android.Studio-4CAF50?style=for-the-badge
+[Android.Studio]: https://img.shields.io/badge/Android.Studio-4CAF50?style=for-the-badge&logo=android-studio&logoColor=white
 [Android-url]: https://developer.android.com/studio?hl=id
-[Gradle]: https://img.shields.io/badge/Gradle-1E90FF?style=for-the-badge
+[Gradle]: https://img.shields.io/badge/Gradle-1E90FF?style=for-the-badge&logo=gradle&logoColor=white
 [Gradle-url]: https://gradle.org/
 [sdk-url]: https://developer.android.com/tools/releases/platform-tools?hl=id
