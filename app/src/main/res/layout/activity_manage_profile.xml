@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="20dp"
+    tools:context=".ui.manageprofile.ManageProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/font_poppinsbold"
+                android:text="@string/manage_profile"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_star" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/layer_drawable"
+            android:layout_gravity="left"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="30dp"/>
+
+        <!-- Profile Picture -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/iv_profile"
+                android:layout_width="153dp"
+                android:layout_height="153dp"
+                android:src="@drawable/ic_profile"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_margin="15dp"
+                android:paddingBottom="10dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="@string/full_name"
+            android:fontFamily="@font/font_poppinssemi"
+            android:textSize="25sp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/email"
+            android:fontFamily="@font/font_poppins"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Full Name EditText -->
+        <EditText
+            android:id="@+id/et_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/font_poppins"
+            android:hint="@string/full_name"
+            android:inputType="textPersonName"/>
+
+        <Spinner
+            android:id="@+id/spinner_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:prompt="@string/gender" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/birth_hint"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/font_poppins"
+            android:textSize="16dp"
+            />
+
+        <!-- Birth Date LinearLayout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_birth_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/font_poppins"
+                android:hint="@string/date"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_birth_month"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/month"
+                android:fontFamily="@font/font_poppins"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_birth_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/year"
+                android:fontFamily="@font/font_poppins"
+                android:inputType="number" />
+
+        </LinearLayout>
+        <!-- Phone Number EditText -->
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/font_poppins"
+            android:hint="@string/phone_number"
+            android:inputType="phone" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_saveprofile"
+            android:layout_width="276dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="@string/save_profile"
+            android:background="@drawable/custom_buttom_playnow"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</ScrollView>

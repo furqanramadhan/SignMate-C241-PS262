@@ -1,0 +1,9 @@
+Edit Profile
+1.GET https://signmate-425105.et.r.appspot.com/user/profile?email=prayogaestu628@gmail.com (example email)
+Description: Get a list of number quiz questions.
+Response: JSON array of questions.
+
+2.POST https://signmate-425105.et.r.appspot.com/user/edit
+Description: Edit user profile.
+Body: "id": "111350991339355032090", "email": "prayogaestu628@gmail.com", "name": "Estu Prayoga", "photo": "https://url-to-new-photo.c
+Response: JSON object with editing status.

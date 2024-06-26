@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.popup.PopupActivity"
+    android:padding="16dp"
+    android:background="@color/white_page">
+
+
+    <ImageView
+        android:id="@+id/iv_completed"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_checkmark" />
+
+    <TextView
+        android:id="@+id/tv_awesome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_completed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/font_poppinsbold"
+        android:text="@string/awesome"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+
+    <TextView
+        android:id="@+id/tv_scoreinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_awesome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/you_have_8_10_correct_answers"
+        android:textSize="18sp"
+        android:fontFamily="@font/font_poppins"
+        android:textColor="#000000" />
+
+
+    <TextView
+        android:id="@+id/tv_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_scoreinfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="keep doing practice and good luck"
+        android:textSize="16sp"
+        android:fontFamily="@font/font_poppins"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_feedback"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/exit_the_quiz"
+        android:fontFamily="@font/font_poppins"
+        android:backgroundTint="#FFC107"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>

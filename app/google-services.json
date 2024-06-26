@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "215899096912",
+    "firebase_url": "https://signmate-7778d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "signmate-7778d",
+    "storage_bucket": "signmate-7778d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215899096912:android:045de838fedc31c4cf8e55",
+        "android_client_info": {
+          "package_name": "com.capstone.signmate_c241_ps262"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215899096912-ckrh1nh6u1vipf10kf9fun00i63nb90q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.capstone.signmate_c241_ps262",
+            "certificate_hash": "aa3df844d639564f41b56df60bc775eae632125d"
+          }
+        },
+        {
+          "client_id": "215899096912-7n5ki28qk6ans3sqgu6vtqvu3th8pbi9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-zQ9OuCBkr68SIBy_s6kPQQpyMFUnSbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215899096912-7n5ki28qk6ans3sqgu6vtqvu3th8pbi9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
