@@ -31,3 +31,7 @@ This app is built with:
 [Gradle]: https://img.shields.io/badge/Gradle-1E90FF?style=for-the-badge&logo=gradle&logoColor=white
 [Gradle-url]: https://gradle.org/
 [sdk-url]: https://developer.android.com/tools/releases/platform-tools?hl=id
+
+
+Our Presentation:
+https://www.canva.com/design/DAGIlhOhCmY/-qJ0XlCRqsbI42gxCoTykQ/edit
